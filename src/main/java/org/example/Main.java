@@ -4,14 +4,67 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        //Exercise 1:
+        System.out.println(" --- Exercise 1: --- ");
+        Car myCar = new Car();
+        myCar.honk();
+        myCar.display();
+        System.out.println();
+
+        //Exercise 1 (Challenge):
+        System.out.println(" --- Exercise 1 (Challenge): --- ");
+        Bicycle bike = new Bicycle();
+        System.out.print("Bicycle says: ");
+        bike.honk();
+        System.out.print("Bicycle says: ");
+        bike.ringBell();
+        System.out.println();
+
+        //Exercise 2:
+        System.out.println(" --- Exercise 2: --- ");
+        Circle myCircle = new Circle();
+        System.out.println(myCircle.display());
+
+        Rectangle myRectangle = new Rectangle();
+        System.out.println(myRectangle.display());
+        System.out.println();
+
+        //Exercise 2 (Challenge):
+        System.out.println(" --- Exercise 2 (Challenge): --- ");
+        Dog dog = new Dog();
+        dog.breathe();
+        dog.makeSound();
+        System.out.println();
+
+        //Exercise 3:
+        System.out.println(" --- Exercise 3: --- ");
+        Editor myEditor = new Editor();
+        CodeEditor myCodeEditor = new CodeEditor();
+        Editor polyEditor = new CodeEditor(); // Polymorphism
+
+        System.out.println("--- Regular Editor ---");
+        myEditor.openFile();
+
+        System.out.println("\n--- Code Editor ---");
+        myCodeEditor.openFile();
+
+        System.out.println("\n--- Polymorphic Editor ---");
+        polyEditor.openFile();
+        System.out.println();
+
+        //Exercise 3 (Challenge):
+        System.out.println(" --- Exercise 3 (Challenge): --- ");
+        GameCharacter civilian = new GameCharacter();
+        ArmoredCharacter hero = new ArmoredCharacter();
+        System.out.println("Civilian character takes " + civilian.takeDamage(100) + " damage. New health: " + civilian.getHealth());
+        System.out.println("Hero character takes " + hero.takeDamage(100) + " damage. New health: " + hero.getHealth());
+        System.out.println();
+
+        //Exercise 4:
+        System.out.println(" --- Exercise 4: --- ");
+        CheckingAccount myChecking = new CheckingAccount(100.0);
+        myChecking.deductMonthlyFee(); // This line cannot be run
+        System.out.println();
     }
 }
